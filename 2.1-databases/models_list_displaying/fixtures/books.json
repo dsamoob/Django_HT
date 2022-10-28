@@ -1,0 +1,102 @@
+[
+  {
+    "model": "books.book",
+    "pk": 1,
+    "fields": {
+      "name": "Война и мир",
+      "author": "Л.Н. Толстой",
+      "pub_date": "2018-02-27"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 2,
+    "fields": {
+      "name": "1984",
+      "author": "Джордж Оруэл",
+      "pub_date": "2016-12-06"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 3,
+    "fields": {
+      "name": "Дивный новый мир",
+      "author": "Хаксли",
+      "pub_date": "1932-02-27"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 4,
+    "fields": {
+      "name": "Мы",
+      "author": "Е.И. Замятин",
+      "pub_date": "1966-05-27"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 5,
+    "fields": {
+      "name": "Вино из одуванчиков",
+      "author": "Рей Бредбери",
+      "pub_date": "1957-01-20"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 6,
+    "fields": {
+      "name": "Сияние",
+      "author": "Стивен Кинг",
+      "pub_date": "2018-09-10"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 7,
+    "fields": {
+      "name": "Шутовской рай",
+      "author": "Роберт Асприн",
+      "pub_date": "1992-07-20"
+    }
+  },
+   {
+    "model": "books.book",
+    "pk": 8,
+    "fields": {
+      "name": "Шутовская Рота",
+      "author": "Роберт Асприн",
+      "pub_date": "1990-06-03"
+    }
+  },
+     {
+    "model": "books.book",
+    "pk": 9,
+    "fields": {
+      "name": "Отель",
+      "author": "Артур Хейли",
+      "pub_date": "1965-06-03"
+    }
+  },
+   {
+    "model": "books.book",
+    "pk": 10,
+    "fields": {
+      "name": "Аэропорт",
+      "author": "Артур Хейли",
+      "pub_date": "1968-03-11"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 11,
+    "fields": {
+      "name": "Этюд в багровых тонах",
+      "author": "Артур Конан Дойл",
+      "pub_date": "1887-01-14"
+    }
+  }
+]
+
