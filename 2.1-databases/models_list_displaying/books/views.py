@@ -18,16 +18,16 @@ def book(request, pub_date):
     template = 'books/one_book.html'
     books_object = get_object_or_404(Book, pub_date=pub_date)
     try:
-        previous_book = Book.objects.order_by('pub_date').filter(pub_date__lt=books_object.pub_date).first()
+        previous_object = books_object.get_previous_by_pub_date()
     except:
-        previous_book = None
+        previous_object = None
     try:
-        next_book = Book.objects.order_by('pub_date').filter(pub_date__gt=books_object.pub_date).first()
+        next_object = books_object.get_next_by_pub_date()
     except:
-        next_book = None
+        next_object = None
     context = {
         'book': books_object,
-        'previous': previous_book,
-        'next': next_book
+        'previous': previous_object,
+        'next': next_object
     }
     return render(request, template, context)
