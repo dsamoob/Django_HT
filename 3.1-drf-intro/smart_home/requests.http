@@ -1,0 +1,49 @@
+# примеры API-запросов
+
+
+###
+
+# получение датчиков
+GET http://localhost:8000/api/sensors/
+Content-Type: application/json
+
+###
+
+# получение информации по одному датчику
+GET http://localhost:8000/api/sensor/1/
+Content-Type: application/json
+
+###
+
+# создание датчика
+POST http://localhost:8000/api/sensors/
+Content-Type: application/json
+
+{
+  "name": "LG",
+  "description": "где-то"
+}
+
+###
+
+# обновление датчика
+PATCH http://localhost:8000/api/sensors/1/
+Content-Type: application/json
+
+{
+  "description": "Перенес датчик на балкон"
+}
+
+###
+
+# добавление измерения
+POST http://localhost:8000/api/measurements/
+Content-Type: application/json
+
+{
+  "id_sensor": 1,
+  "temperature": 22.3
+}
+
+###
+

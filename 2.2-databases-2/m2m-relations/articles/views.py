@@ -8,5 +8,4 @@ def articles_list(request):
     object_list = Article.objects.all()
     context = {'object_list': object_list}
 
-
     return render(request, template, context)
