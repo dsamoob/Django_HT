@@ -18,7 +18,7 @@ class ProductPositionSerializer(serializers.ModelSerializer):
 
 
 class StockSerializer(serializers.ModelSerializer):
-    positions = ProductPositionSerializer(many=True)
+    positions = ProductPositionSerializer(many=True, read_only=True)
 
     class Meta:
         model = Stock
@@ -46,18 +46,30 @@ class StockSerializer(serializers.ModelSerializer):
         print('update_start: instance', instance)
         print('update_start: validated_data', validated_data)
         pre_pos = validated_data.get('positions')
-        print('pre_pos', pre_pos)
+        stock = super().update(instance, validated_data)
+        # for position in pre_pos:
+        #     product = position.get('product')
+        #     quantity = position.get('quantity')
+        #     price = position.get('price')
+        #     obj, created = StockProduct.objects.update_or_create(
+        #         stock=stock,
+        #         product=product,
+        #         defaults={'price': price,
+        #                   'quantity': quantity}
+        #     )
+        # return stock
+
+
         positions = validated_data.pop('positions')
-        print(pre_pos.get('product'))
-        # print('update_1: positions', positions)
-        print('update_1: validate_data', validated_data)
+
+
         stock = super().update(instance, validated_data)
         for position in positions:
-
+            product = position.get('product')
             ob = Product.objects.filter(title=product)
             for i in ob:
                 print(i.id)
-            product = position.get('product')
+
             # print('product:', product)
             quantity = position.get('quantity')
             price = position.get('price')
