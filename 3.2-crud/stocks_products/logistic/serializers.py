@@ -19,19 +19,18 @@ class ProductPositionSerializer(serializers.ModelSerializer):
 
 class StockSerializer(serializers.ModelSerializer):
     positions = ProductPositionSerializer(many=True)
+
     class Meta:
         model = Stock
         fields = ['id', 'address', 'products', 'positions']
-        # depth = 1
-    # настройте сериализатор для склада
 
     def create(self, validated_data):
-        print('Validated_data:', validated_data)
+
+        print('create', validated_data)
         positions = validated_data.pop('positions')
-        # for position in validated_data.pop('positions'):
-        #     print('position:', position)
-        # создаем склад по его параметрам
         stock = super().create(validated_data)
+        print('create_stock', stock)
+
         for position in positions:
             stock_product = StockProduct(
                 stock=stock,
@@ -44,20 +43,29 @@ class StockSerializer(serializers.ModelSerializer):
         return stock
 
     def update(self, instance, validated_data):
-        # достаем связанные данные для других таблиц
-        print(validated_data)
+        print('update_start: instance', instance)
+        print('update_start: validated_data', validated_data)
+        pre_pos = validated_data.get('positions')
+        print('pre_pos', pre_pos)
         positions = validated_data.pop('positions')
-        print(positions)
-        # обновляем склад по его параметрам
+        print(pre_pos.get('product'))
+        # print('update_1: positions', positions)
+        print('update_1: validate_data', validated_data)
         stock = super().update(instance, validated_data)
-
-        # здесь вам надо обновить связанные таблицы
-        # в нашем случае: таблицу StockProduct
-        # с помощью списка positions
-
         for position in positions:
-            product = StockProduct.objects.filter(stock=stock.id,
-                                                  product=position.get('product').id)
-            product.update(quantity=position.get('quantity'),
-                           price=position.get('price'))
+
+            ob = Product.objects.filter(title=product)
+            for i in ob:
+                print(i.id)
+            product = position.get('product')
+            # print('product:', product)
+            quantity = position.get('quantity')
+            price = position.get('price')
+            # print(position, product, quantity, price)
+            obj, created = StockProduct.objects.update_or_create(
+                stock=stock,
+                product=product,
+                defaults={'price': price,
+                          'quantity': quantity}
+            )
         return stock

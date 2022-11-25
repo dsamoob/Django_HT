@@ -24,7 +24,7 @@ PATCH http://127.0.0.1:8000/api/v1/products/5/
 Content-Type: application/json
 
 {
-  "description": "Самые сочные и ароматные помидорки"
+  "description": "Очень сочные и ароматные помидорки"
 }
 
 ###
@@ -46,7 +46,7 @@ POST http://127.0.0.1:8000/api/v1/stocks/
 Content-Type: application/json
 
 {
-  "address": "on53744 moreадрес не дом и не улица, мой адрес сегодня такой: www.ленинград-спб.ru3",
+  "address": "o2w3244 moreадрес не дом и не улица, мой адрес сегодня такой: www.ленинград-спб.ru3",
   "positions": [
     {
       "product": 2,
