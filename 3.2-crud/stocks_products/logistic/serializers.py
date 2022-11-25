@@ -18,7 +18,7 @@ class ProductPositionSerializer(serializers.ModelSerializer):
 
 
 class StockSerializer(serializers.ModelSerializer):
-    positions = ProductPositionSerializer(many=True, read_only=True)
+    positions = ProductPositionSerializer(many=True)
 
     class Meta:
         model = Stock
@@ -46,7 +46,7 @@ class StockSerializer(serializers.ModelSerializer):
         print('update_start: instance', instance)
         print('update_start: validated_data', validated_data)
         pre_pos = validated_data.get('positions')
-        stock = super().update(instance, validated_data)
+
         # for position in pre_pos:
         #     product = position.get('product')
         #     quantity = position.get('quantity')
@@ -61,8 +61,6 @@ class StockSerializer(serializers.ModelSerializer):
 
 
         positions = validated_data.pop('positions')
-
-
         stock = super().update(instance, validated_data)
         for position in positions:
             product = position.get('product')
