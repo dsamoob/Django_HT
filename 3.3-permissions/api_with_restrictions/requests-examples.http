@@ -1,0 +1,69 @@
+# примеры API-запросов
+
+@baseUrl = http://localhost:8000/api/
+###
+# получение объявлений
+GET http://localhost:8000/api/advertisements/
+Content-Type: application/json
+
+###
+
+# создание объявления
+POST http://localhost:8000/api/advertisements/
+Content-Type: application/json
+Authorization: Token a5fbdbfcd45fe0652e44a8607ae7c7d793725699  #first user
+
+{
+  "title": "Шкаф IKEA",
+  "description": "Срочно"
+}
+
+###
+POST http://localhost:8000/api/advertisements/
+Content-Type: application/json
+Authorization: Token 4aad6a633be3d75722c3d50c8bee4ad0f8ddef46 #seconduser
+
+{
+  "title": "Шкаф Decathlon",
+  "description": "не слишком срочно",
+  "status": "CLOSED"
+}
+###
+
+# попытка поменять объявление1
+PATCH http://localhost:8000/api/advertisements/4/
+Content-Type: application/json
+Authorization: Token 4aad6a633be3d75722c3d50c8bee4ad0f8ddef46  # токен второго пользователя, пытающегося поменять обьвление первого пользователя
+
+{
+  "status": "CLOSED"
+}
+###
+
+###
+
+# попытка поменять объявление 2
+PATCH http://localhost:8000/api/advertisements/9/
+Content-Type: application/json
+Authorization: Token a5fbdbfcd45fe0652e44a8607ae7c7d793725699  # токен второго пользователя, пытающегося поменять обьвление первого пользователя
+
+{
+  "status": "CLOSED"
+}
+###
+
+DELETE http://localhost:8000/api/advertisements/4/
+Content-Type: application/json
+Authorization: Token 4aad6a633be3d75722c3d50c8bee4ad0f8ddef46
+
+###
+
+# фильтрация по создателю
+GET http://localhost:8000/api/advertisements/?creator=2
+Content-Type: application/json
+
+###
+
+# фильтрация по дате
+GET http://localhost:8000/api/advertisements/?created_at_before=2022-11-29
+Content-Type: application/json
