@@ -1,3 +1,4 @@
+from rest_framework.permissions import IsAuthenticated
 from rest_framework.viewsets import ModelViewSet
 from .filters import AdvertisementFilter
 from .models import Advertisement
@@ -12,7 +13,11 @@ class AdvertisementViewSet(ModelViewSet):
     filterset_class = AdvertisementFilter
 
 
-    def perform_create(self, serializer):
-        serializer.save(creator=self.request.user)
+    def get_permissions(self):
+        if self.action == 'create':
+            return [IsAuthenticated(), ]
+        if self.action in ["update", "partial_update", "destroy", ]:
+            return [IsAuthenticated(), IsOwnerOrReadOnly()]
 
+        return []
 
