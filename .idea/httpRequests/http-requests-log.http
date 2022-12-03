@@ -1,3 +1,81 @@
+GET http://localhost:8000/api/advertisements/?creator=2
+Content-Type: application/json
+
+<> 2022-12-03T092322.200.json
+
+###
+
+GET http://localhost:8000/api/advertisements/?created_at_before=2022-11-29
+Content-Type: application/json
+
+<> 2022-12-03T092314.200.json
+
+###
+
+GET http://localhost:8000/api/advertisements/?creator=2
+Content-Type: application/json
+
+<> 2022-12-03T092310.200.json
+
+###
+
+POST http://localhost:8000/api/advertisements/
+Content-Type: application/json
+
+{
+  "title": "Шкаф Decathlon",
+  "description": "не слишком срочно",
+  "status": "CLOSED"
+}
+
+<> 2022-12-03T092259.401.json
+
+###
+
+POST http://localhost:8000/api/advertisements/
+Content-Type: application/json
+
+{
+  "title": "Шкаф IKEA",
+  "description": "Срочно"
+}
+
+<> 2022-12-03T092247.401.json
+
+###
+
+POST http://localhost:8000/api/advertisements/
+Content-Type: application/json
+
+{
+  "title": "Шкаф IKEA",
+  "description": "Срочно"
+}
+
+<> 2022-12-03T092242.401.json
+
+###
+
+POST http://localhost:8000/api/advertisements/
+Content-Type: application/json
+Authorization: Token a5fbdbfcd45fe0652e44a8607ae7c7d793725699
+
+{
+  "title": "Шкаф IKEA",
+  "description": "Срочно"
+}
+
+<> 2022-12-03T092235.400.json
+
+###
+
+GET http://localhost:8000/api/advertisements/
+Content-Type: application/json
+
+<> 2022-12-03T092233.200.json
+
+###
+
 POST http://localhost:8000/api/advertisements/
 Content-Type: application/json
 
@@ -697,182 +775,6 @@ Content-Type: application/json
 }
 
 <> 2022-11-25T144351.200.json
-
-###
-
-PATCH http://127.0.0.1:8000/api/v1/stocks/4/
-Content-Type: application/json
-
-{
-  "positions": [
-    {
-      "product": 2,
-      "quantity": 100,
-      "price": 130.80
-    },
-    {
-      "product": 3,
-      "quantity": 243,
-      "price": 145
-    }
-  ]
-}
-
-<> 2022-11-25T144307.500.html
-
-###
-
-PATCH http://127.0.0.1:8000/api/v1/stocks/4/
-Content-Type: application/json
-
-{
-  "positions": [
-    {
-      "product": 2,
-      "quantity": 100,
-      "price": 130.80
-    },
-    {
-      "product": 3,
-      "quantity": 243,
-      "price": 145
-    }
-  ]
-}
-
-<> 2022-11-25T144210.200.json
-
-###
-
-PATCH http://127.0.0.1:8000/api/v1/stocks/4/
-Content-Type: application/json
-
-{
-  "positions": [
-    {
-      "product": 2,
-      "quantity": 100,
-      "price": 130.80
-    },
-    {
-      "product": 3,
-      "quantity": 243,
-      "price": 145
-    }
-  ]
-}
-
-<> 2022-11-25T144140.500.html
-
-###
-
-PATCH http://127.0.0.1:8000/api/v1/stocks/4/
-Content-Type: application/json
-
-{
-  "positions": [
-    {
-      "product": 2,
-      "quantity": 100,
-      "price": 130.80
-    },
-    {
-      "product": 3,
-      "quantity": 243,
-      "price": 145
-    }
-  ]
-}
-
-<> 2022-11-25T144036.500.html
-
-###
-
-PATCH http://127.0.0.1:8000/api/v1/stocks/4/
-Content-Type: application/json
-
-{
-  "positions": [
-    {
-      "product": 2,
-      "quantity": 100,
-      "price": 130.80
-    },
-    {
-      "product": 3,
-      "quantity": 243,
-      "price": 145
-    }
-  ]
-}
-
-<> 2022-11-25T144033.200.json
-
-###
-
-PATCH http://127.0.0.1:8000/api/v1/stocks/4/
-Content-Type: application/json
-
-{
-  "positions": [
-    {
-      "product": 2,
-      "quantity": 100,
-      "price": 130.80
-    },
-    {
-      "product": 3,
-      "quantity": 243,
-      "price": 145
-    }
-  ]
-}
-
-<> 2022-11-25T143715.200.json
-
-###
-
-PATCH http://127.0.0.1:8000/api/v1/stocks/4/
-Content-Type: application/json
-
-{
-  "positions": [
-    {
-      "product": 2,
-      "quantity": 100,
-      "price": 130.80
-    },
-    {
-      "product": 3,
-      "quantity": 243,
-      "price": 145
-    }
-  ]
-}
-
-<> 2022-11-25T143607.200.json
-
-###
-
-PATCH http://127.0.0.1:8000/api/v1/stocks/4/
-Content-Type: application/json
-
-{
-  "positions": [
-    {
-      "product": 2,
-      "quantity": 100,
-      "price": 130.80
-    },
-    {
-      "product": 3,
-      "quantity": 243,
-      "price": 145
-    }
-  ]
-}
-
-<> 2022-11-25T143519.500.html
 
 ###
 
