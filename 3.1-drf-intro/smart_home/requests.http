@@ -20,14 +20,18 @@ POST http://localhost:8000/api/sensors/
 Content-Type: application/json
 
 {
-  "name": "LG",
+  "name": "L3G",
   "description": "где-то"
 }
+###
+DELETE http://localhost:8000/api/sensors/1/
+Content-Type: application/json
+
 
 ###
 
 # обновление датчика
-PATCH http://localhost:8000/api/sensors/1/
+PATCH http://localhost:8000/api/sensors/5/
 Content-Type: application/json
 
 {

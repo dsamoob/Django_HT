@@ -24,6 +24,8 @@ class UpdateSensor(UpdateAPIView):
     queryset = Sensor.objects.all()
     serializer_class = SensorUpdateSerializer
 
+
+
 #
 #
 # class SensorView(APIView):

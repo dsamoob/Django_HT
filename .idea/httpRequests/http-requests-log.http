@@ -1,3 +1,139 @@
+POST http://127.0.0.1:8000/api/v1/stocks/
+Content-Type: application/json
+
+{
+  "address": "o2w3244 moreадрес не дом и не улица, мой адрес сегодня такой: www.ленинград-спб.ru3",
+  "positions": [
+    {
+      "product": 2,
+      "quantity": 250,
+      "price": 120.50
+    },
+    {
+      "product": 3,
+      "quantity": 100,
+      "price": 180
+    }
+  ]
+}
+
+<> 2022-12-19T134523.404.html
+
+###
+
+DELETE http://localhost:8000/api/sensors/1/
+Content-Type: application/json
+
+<> 2022-12-19T133511.405.json
+
+###
+
+POST http://localhost:8000/api/measurements/
+Content-Type: application/json
+
+{
+  "id_sensor": 1,
+  "temperature": 22.3
+}
+
+<> 2022-12-19T131646.201.json
+
+###
+
+POST http://localhost:8000/api/sensors/
+Content-Type: application/json
+
+{
+  "name": "L3G",
+  "description": "где-то"
+}
+
+<> 2022-12-19T131549.405.json
+
+###
+
+PATCH http://localhost:8000/api/sensors/5/
+Content-Type: application/json
+
+{
+  "description": "Перенес датчик на балкон"
+}
+
+<> 2022-12-19T131541.200.json
+
+###
+
+POST http://localhost:8000/api/sensors/
+Content-Type: application/json
+
+{
+  "name": "LG",
+  "description": "где-то"
+}
+
+<> 2022-12-19T131439.405.json
+
+###
+
+GET http://localhost:8000/api/sensors/
+Content-Type: application/json
+
+<> 2022-12-19T131436.200.json
+
+###
+
+GET http://localhost:8000/api/sensors/
+Content-Type: application/json
+
+<> 2022-12-19T131207.404.html
+
+###
+
+POST http://localhost:8000/api/sensors/
+Content-Type: application/json
+
+{
+  "name": "LG",
+  "description": "где-то"
+}
+
+<> 2022-12-19T131152.404.html
+
+###
+
+POST http://localhost:8000/api/sensors/
+Content-Type: application/json
+
+{
+  "name": "LG",
+  "description": "где-то"
+}
+
+<> 2022-12-19T131146.404.html
+
+###
+
+DELETE http://localhost:8000/api/advertisements/4/
+Content-Type: application/json
+Authorization: Token 4aad6a633be3d75722c3d50c8bee4ad0f8ddef46
+
+<> 2022-12-19T131014.403.json
+
+###
+
+POST http://localhost:8000/api/advertisements/
+Content-Type: application/json
+Authorization: Token a5fbdbfcd45fe0652e44a8607ae7c7d793725699
+
+{
+  "title": "Шкаф IKEA",
+  "description": "Срочно"
+}
+
+<> 2022-12-19T131000.400.json
+
+###
+
 GET http://localhost:8000/api/advertisements/?creator=2
 Content-Type: application/json
 
@@ -511,270 +647,6 @@ Content-Type: application/json
 }
 
 <> 2022-11-25T151143.200.json
-
-###
-
-PATCH http://127.0.0.1:8000/api/v1/stocks/4/
-Content-Type: application/json
-
-{
-  "positions": [
-    {
-      "product": 2,
-      "quantity": 100,
-      "price": 130.80
-    },
-    {
-      "product": 3,
-      "quantity": 243,
-      "price": 145
-    }
-  ]
-}
-
-<> 2022-11-25T151120.500.html
-
-###
-
-PATCH http://127.0.0.1:8000/api/v1/stocks/4/
-Content-Type: application/json
-
-{
-  "positions": [
-    {
-      "product": 2,
-      "quantity": 100,
-      "price": 130.80
-    },
-    {
-      "product": 3,
-      "quantity": 243,
-      "price": 145
-    }
-  ]
-}
-
-<> 2022-11-25T151047.500.html
-
-###
-
-PATCH http://127.0.0.1:8000/api/v1/stocks/4/
-Content-Type: application/json
-
-{
-  "positions": [
-    {
-      "product": 2,
-      "quantity": 100,
-      "price": 130.80
-    },
-    {
-      "product": 3,
-      "quantity": 243,
-      "price": 145
-    }
-  ]
-}
-
-<> 2022-11-25T145614.500.html
-
-###
-
-PATCH http://127.0.0.1:8000/api/v1/stocks/4/
-Content-Type: application/json
-
-{
-  "positions": [
-    {
-      "product": 2,
-      "quantity": 100,
-      "price": 130.80
-    },
-    {
-      "product": 3,
-      "quantity": 243,
-      "price": 145
-    }
-  ]
-}
-
-<> 2022-11-25T145516.500.html
-
-###
-
-PATCH http://127.0.0.1:8000/api/v1/stocks/4/
-Content-Type: application/json
-
-{
-  "positions": [
-    {
-      "product": 2,
-      "quantity": 100,
-      "price": 130.80
-    },
-    {
-      "product": 3,
-      "quantity": 243,
-      "price": 145
-    }
-  ]
-}
-
-<> 2022-11-25T145414.200.json
-
-###
-
-PATCH http://127.0.0.1:8000/api/v1/stocks/4/
-Content-Type: application/json
-
-{
-  "positions": [
-    {
-      "product": 2,
-      "quantity": 100,
-      "price": 130.80
-    },
-    {
-      "product": 3,
-      "quantity": 243,
-      "price": 145
-    }
-  ]
-}
-
-<> 2022-11-25T145323.200.json
-
-###
-
-PATCH http://127.0.0.1:8000/api/v1/stocks/4/
-Content-Type: application/json
-
-{
-  "positions": [
-    {
-      "product": 2,
-      "quantity": 100,
-      "price": 130.80
-    },
-    {
-      "product": 3,
-      "quantity": 243,
-      "price": 145
-    }
-  ]
-}
-
-<> 2022-11-25T145049.200.json
-
-###
-
-PATCH http://127.0.0.1:8000/api/v1/stocks/4/
-Content-Type: application/json
-
-{
-  "positions": [
-    {
-      "product": 2,
-      "quantity": 100,
-      "price": 130.80
-    },
-    {
-      "product": 3,
-      "quantity": 243,
-      "price": 145
-    }
-  ]
-}
-
-<> 2022-11-25T145034.200.json
-
-###
-
-PATCH http://127.0.0.1:8000/api/v1/stocks/4/
-Content-Type: application/json
-
-{
-  "positions": [
-    {
-      "product": 2,
-      "quantity": 100,
-      "price": 130.80
-    },
-    {
-      "product": 3,
-      "quantity": 243,
-      "price": 145
-    }
-  ]
-}
-
-<> 2022-11-25T144812.200.json
-
-###
-
-PATCH http://127.0.0.1:8000/api/v1/stocks/4/
-Content-Type: application/json
-
-{
-  "positions": [
-    {
-      "product": 2,
-      "quantity": 100,
-      "price": 130.80
-    },
-    {
-      "product": 3,
-      "quantity": 243,
-      "price": 145
-    }
-  ]
-}
-
-<> 2022-11-25T144444.200.json
-
-###
-
-PATCH http://127.0.0.1:8000/api/v1/stocks/4/
-Content-Type: application/json
-
-{
-  "positions": [
-    {
-      "product": 2,
-      "quantity": 100,
-      "price": 130.80
-    },
-    {
-      "product": 3,
-      "quantity": 243,
-      "price": 145
-    }
-  ]
-}
-
-<> 2022-11-25T144413.200.json
-
-###
-
-PATCH http://127.0.0.1:8000/api/v1/stocks/4/
-Content-Type: application/json
-
-{
-  "positions": [
-    {
-      "product": 2,
-      "quantity": 100,
-      "price": 130.80
-    },
-    {
-      "product": 3,
-      "quantity": 243,
-      "price": 145
-    }
-  ]
-}
-
-<> 2022-11-25T144351.200.json
 
 ###
 
